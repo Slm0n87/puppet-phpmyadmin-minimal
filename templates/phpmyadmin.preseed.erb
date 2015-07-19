@@ -1,0 +1,5 @@
+# managed by puppet
+phpmyadmin  phpmyadmin/reconfigure-webserver  multiselect apache2
+phpmyadmin  phpmyadmin/dbconfig-install boolean true
+phpmyadmin  phpmyadmin/mysql/admin-pass password <%= @conf['mysql_rootpw'] %>
+phpmyadmin phpmyadmin/mysql/app-pass    password
