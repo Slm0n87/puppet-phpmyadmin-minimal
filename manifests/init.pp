@@ -13,8 +13,9 @@ class sist_phpmyadmin inherits sist_vars {
     require => undef,
   }->
   package { 'phpmyadmin':
-    ensure => $ensure,
+    ensure       => $ensure,
     responsefile => "/var/local/preseed/phpmyadmin.preseed",
+    require      => Service['mysql'],
   }
 
   file { '/etc/phpmyadmin/apache.conf':

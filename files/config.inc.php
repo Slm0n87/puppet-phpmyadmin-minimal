@@ -115,4 +115,7 @@ if (!empty($dbname)) {
  */
 $cfg['UploadDir'] = '';
 $cfg['SaveDir'] = '';
-
+$cfg['DefaultLang'] = 'de';
+$cfg['ServerDefault'] = 1;
+$cfg['ForceSSL'] = true;
+$cfg['QueryHistoryDB'] = true;
