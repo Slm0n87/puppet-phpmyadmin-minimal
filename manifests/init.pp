@@ -24,6 +24,8 @@ class sist_phpmyadmin inherits sist_vars {
   }
   file { '/etc/phpmyadmin/htpasswd.setup':
     source => 'puppet:///modules/sist_phpmyadmin/htpasswd.setup',
+    mode   => 640,
+    group  => 'www-data',
   }
   file { '/etc/phpmyadmin/config.inc.php':
     source => 'puppet:///modules/sist_phpmyadmin/config.inc.php',
