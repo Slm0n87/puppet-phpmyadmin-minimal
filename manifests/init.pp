@@ -12,10 +12,11 @@ class sist_phpmyadmin inherits sist_vars {
     backup  => false,
     require => undef,
   }->
-  package { 'phpmyadmin':
+    package { 'phpmyadmin':
     ensure       => $ensure,
     responsefile => "/var/local/preseed/phpmyadmin.preseed",
     require      => Service['mysql'],
+    loglevel     => debug,
   }
 
   file { '/etc/phpmyadmin/apache.conf':
